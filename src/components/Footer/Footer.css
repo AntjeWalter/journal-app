@@ -1,8 +1,12 @@
 .footer {
   display: block;
-  background-color: lightgray;
+  background-color: var(--color-granite);
+  color: var(--color-foam);
+  text-align: center;
+  margin: 10px;
 }
 
 .footer__text {
   text-align: center;
+  padding: 10px;
 }

@@ -1,8 +1,14 @@
+import "./Tabs.css";
+
 export default function Tabs() {
   return (
     <>
-      <p>All Entries (1)</p>
-      <p>Favorites(0)</p>
+      <button type="button" className="button__tabs">
+        All Entries (2)
+      </button>
+      <button type="button" className="button__tabs">
+        Favorites(1)
+      </button>
     </>
   );
 }
