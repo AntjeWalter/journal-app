@@ -1,0 +1,11 @@
+.button__tabs {
+  color: var(--color-nemo);
+  background-color: var(--color-foam);
+  border: none;
+  margin-top: 20px;
+}
+
+.button__tabs:hover {
+  cursor: pointer;
+  color: var(--color-nemo-dark);
+}

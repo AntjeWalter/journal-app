@@ -12,7 +12,17 @@ function App() {
       <Header />
       <Form />
       <Tabs />
-      <Entries />
+      <Entries
+        date="Nov 18 2022"
+        headline="Headline"
+        notes="Lorem ipsum"
+      ></Entries>
+      <img src={star} alt="empty star"></img>
+      <Entries
+        date="Nov 19 2022"
+        headline="Headline"
+        notes="Lorem ipsum"
+      ></Entries>
       <img src={star} alt="empty star"></img>
       <Entries />
       <Footer />

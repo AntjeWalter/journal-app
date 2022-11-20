@@ -1,0 +1,25 @@
+.entry__headline {
+  display: block;
+  text-align: center;
+}
+
+.entry__form {
+  margin: 10px;
+}
+
+.entry__input {
+  display: block;
+}
+
+.entry__button {
+  background-color: var(--color-nemo);
+  color: var(--color-foam);
+  border: none;
+  border-radius: 2px;
+  margin: auto;
+}
+
+.entry__button:hover {
+  cursor: pointer;
+  background-color: var(--color-nemo-dark);
+}

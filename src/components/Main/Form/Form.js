@@ -1,12 +1,18 @@
+import "./Form.css";
+
 export default function Form() {
   return (
     <>
-      <p>New Entry</p>
-      <label htmlFor="motto">Motto</label>
-      <input type="text" id="motto"></input>
-      <label htmlFor="notes">Notes</label>
-      <input type="text" id="notes"></input>
-      <button type="submit">Create</button>
+      <p className="entry__headline">NEW ENTRY</p>
+      <form className="entry__form">
+        <label htmlFor="motto">Motto</label>
+        <textarea type="text" id="motto" className="entry__input"></textarea>
+        <label htmlFor="notes">Notes</label>
+        <textarea type="text" id="notes" className="entry__input"></textarea>
+        <button type="submit" className="entry__button">
+          Create
+        </button>
+      </form>
     </>
   );
 }
