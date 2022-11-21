@@ -1,0 +1,22 @@
+.tab {
+  border: none;
+  background-color: unset;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 20px;
+}
+
+.tab:hover {
+  background-color: var(--color-water);
+}
+
+.tab:active {
+  background-color: var(--color-water-10);
+}
+
+.tab--active {
+  color: var(--color-nemo);
+}

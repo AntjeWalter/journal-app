@@ -1,6 +1,8 @@
 import Entries from "../Entries/Entries";
 import Tabs from "../Tabs/Tabs";
+import Tab from "../Tab/Tab";
 import Divider from "../Divider/Divider";
+import Badge from "../Badge/Badge";
 import "./EntriesSection.css";
 
 const entries = [
@@ -36,7 +38,14 @@ const entries = [
 export default function EntriesSection() {
   return (
     <section className="entries-section">
-      <Tabs />
+      <Tabs>
+        <Tab active>
+          All Entries <Badge isActive>3</Badge>
+        </Tab>
+        <Tab>
+          Favorite <Badge>1</Badge>
+        </Tab>
+      </Tabs>
       <div className="entry-section__entries">
         {entries.map((entry, index) => {
           return (

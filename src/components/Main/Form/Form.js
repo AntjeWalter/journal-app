@@ -9,9 +9,11 @@ export default function Form() {
         <textarea type="text" id="motto" className="entry__input"></textarea>
         <label htmlFor="notes">Notes</label>
         <textarea type="text" id="notes" className="entry__input"></textarea>
-        <button type="submit" className="entry__button">
-          Create
-        </button>
+        <div className="entry__button-center">
+          <button type="submit" className="entry__button">
+            Create
+          </button>
+        </div>
       </form>
     </>
   );
