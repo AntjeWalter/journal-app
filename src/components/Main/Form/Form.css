@@ -5,14 +5,22 @@
 
 .entry__input {
   display: block;
+  width: 100%;
+  height: 50px;
+}
+
+.entry__button-center {
+  text-align: center;
 }
 
 .entry__button {
   background-color: var(--color-nemo);
   color: var(--color-foam);
   border: none;
-  border-radius: 2px;
-  margin: auto;
+  border-radius: 5px;
+  padding: 8px 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .entry__button:hover {

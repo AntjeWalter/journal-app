@@ -1,4 +1,34 @@
+.entry {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 .entry__date {
-  display: block;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.entry__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.entry__headline-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.entry__notes {
+  margin: 0;
+  font-size: 14px;
+}
+
+.entry__favorite-button {
+  cursor: pointer;
 }

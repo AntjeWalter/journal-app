@@ -1,11 +1,5 @@
-.button__tabs {
-  color: var(--color-nemo);
-  background-color: var(--color-foam);
-  border: none;
-  margin-top: 20px;
-}
-
-.button__tabs:hover {
-  cursor: pointer;
-  color: var(--color-nemo-dark);
+.tabs {
+  width: 100%;
+  display: flex;
+  gap: 32px;
 }
