@@ -13,7 +13,7 @@ export default function FavoriteButton() {
   return (
     <button
       className="favorite-button"
-      onClick={() => toggleFavorite()}
+      onClick={toggleFavorite}
       aria-label="favorite"
     >
       {isFavorite ? <StarFilled /> : <Star />}
