@@ -6,45 +6,31 @@ import Badge from "../Badge/Badge";
 import "./EntriesSection.css";
 import { Fragment } from "react";
 
-const entries = [
-  {
-    id: 1000,
-    date: "Feb 5, 2025",
-    motto: "We are in a state of chaos",
-    notes:
-      "Today I learned about React State. It was fun! I can't wait to learn more.",
-  },
-  {
-    id: 999,
-    date: "Feb 4, 2025",
-    motto: "Props, Props, Props",
-    notes:
-      "Today I learned about React Props. Mad props to everyone who understands this!",
-  },
-  {
-    id: 998,
-    date: "Feb 3, 2025",
-    motto: "How to nest components online fast",
-    notes:
-      "Today I learned about React Components and how to nest them like a pro. Application design is so much fun!",
-  },
-  {
-    id: 997,
-    date: "Feb 2, 2025",
-    motto: "I'm a React Developer",
-    notes: "My React-ion when I learned about React: 😍",
-  },
-];
-
-export default function EntriesSection() {
+export default function EntriesSection({
+  entries,
+  onToggleFavorite,
+  onShowAllEntries,
+  onShowFavoriteEntries,
+  filter,
+  allEntriesCount,
+  favoriteEntriesCount,
+}) {
   return (
     <section className="entries-section">
       <Tabs>
-        <Tab isActive>
-          All Entries <Badge isActive>3</Badge>
+        <Tab
+          isActive={filter === "all" ? true : false}
+          onClick={onShowAllEntries}
+        >
+          All Entries{" "}
+          <Badge isActive={filter === "all"}>{allEntriesCount}</Badge>
         </Tab>
-        <Tab>
-          Favorite <Badge>1</Badge>
+        <Tab
+          isActive={filter === "favorites" ? true : false}
+          onClick={onShowFavoriteEntries}
+        >
+          Favorites{" "}
+          <Badge isActive={filter === "favorite"}>{favoriteEntriesCount}</Badge>
         </Tab>
       </Tabs>
       <div className="entry-section__entries">
@@ -56,6 +42,9 @@ export default function EntriesSection() {
                 date={entry.date}
                 headline={entry.motto}
                 notes={entry.notes}
+                id={entry.id}
+                isFavorite={entry.isFavorite}
+                onToggleFavorite={onToggleFavorite}
               />
               {index === entries.length - 1 ? "" : <Divider />}
             </Fragment>

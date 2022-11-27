@@ -2,16 +2,19 @@ import "./Form.css";
 import Entries from "../Entries/Entries";
 import useLocalStorageState from "use-local-storage-state";
 
-export default function Form() {
-  const [localEntry, setEntries] = useLocalStorageState("localEntry", {
+export default function Form({ onAddEntry }) {
+  /*const [localEntry, setEntries] = useLocalStorageState("localEntry", {
     defaultValue: [{ motto: "", notes: "" }],
-  });
+  });*/
 
   function handleSubmit(event) {
-    setEntries({
+    event.preventDefault();
+    const addedEntry = {
       motto: event.target.elements.motto.value,
       notes: event.target.elements.notes.value,
-    });
+    };
+    onAddEntry(addedEntry);
+    event.target.reset();
   }
 
   return (
